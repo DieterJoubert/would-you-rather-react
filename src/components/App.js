@@ -4,10 +4,11 @@ import LoadingBar from 'react-redux-loading'
 import '../App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import HomePage from './HomePage';
+import Dashboard from './Dashboard';
 import Nav from './Nav';
 import LeaderBoard from './LeaderBoard';
 import NewQuestion from './NewQuestion';
+import QuestionPage from './QuestionPage';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,11 +28,12 @@ const App = () => {
           <Nav />
           {isLoading === true
             ? null
-            : <div>DONE LOADING
+            : <div>
               <Routes>
-                <Route path='/' exact element={<HomePage />} />
-                <Route path='/new-question' exact element={<NewQuestion />} />
-                <Route path='/leaderboard' exact element={<LeaderBoard />} />
+                <Route path='/' exact element={<Dashboard />} />
+                <Route path='/new-question' element={<NewQuestion />} />
+                <Route path='/leaderboard' element={<LeaderBoard />} />
+                <Route path='/question/:id' element={<QuestionPage />} />
               </Routes>
             </div>}
         </div>
