@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../App.css';
 import { useSelector } from 'react-redux'
 import Question from './Question';
 import { userHasAnswered } from '../utils/helpers';
@@ -43,10 +42,10 @@ const Dashboard = () => {
     return (
         <div>
             <div className='dashboard-button-container' style={style}>
-                <button className='btn' onClick={onViewUnansweredClick} disabled={isUnasweredSelected}>
+                <button className='btn large-btn' onClick={onViewUnansweredClick} disabled={isUnasweredSelected}>
                     Unanswered Questions
                 </button>
-                <button className='btn' onClick={onViewAnsweredClick} disabled={!isUnasweredSelected}>
+                <button className='btn large-btn' onClick={onViewAnsweredClick} disabled={!isUnasweredSelected}>
                     Answered Questions
                 </button>
             </div>

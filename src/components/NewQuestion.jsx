@@ -44,7 +44,7 @@ const NewQuestion = () => {
                         onChange={handleChange}
                         maxLength={280}
                     />
-                    <button className='btn' type='submit' disabled={isButtonDisabled()}>
+                    <button className='btn large-btn' type='submit' disabled={isButtonDisabled()}>
                         Submit
                     </button>
                 </div>

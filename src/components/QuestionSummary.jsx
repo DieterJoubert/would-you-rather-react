@@ -20,8 +20,8 @@ const QuestionSummary = (props) => {
                 </div>
             </div>
             <div>
-                <button className='replying-to' onClick={(e) => onViewPollClick(e, question.id)}>
-                    View Poll
+                <button className='btn' onClick={(e) => onViewPollClick(e, question.id)}>
+                    View
                 </button>
             </div>
         </div>
