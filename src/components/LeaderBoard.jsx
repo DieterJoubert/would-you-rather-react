@@ -10,7 +10,7 @@ const LeaderBoard = () => {
         <div>
             LEADERBOARD
             {userIdsRanked.map((id) => (
-                <UserStats id={id} />
+                <UserStats key={id} id={id} />
             ))}
         </div>
     )

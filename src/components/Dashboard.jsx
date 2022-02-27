@@ -2,10 +2,7 @@ import { useState, useEffect } from 'react';
 import '../App.css';
 import { useSelector } from 'react-redux'
 import Question from './Question';
-
-const userHasAnswered = (question, user) => {
-    return question.optionOne.votes.includes(user) || question.optionTwo.votes.includes(user)
-}
+import { userHasAnswered } from '../utils/helpers';
 
 const getSelectedQuestionIds = (questions, authedUser, isUnasweredSelected) => {
     var keys = Object.keys(questions);

@@ -1,8 +1,6 @@
 import { Routes, Route, NavLink } from "react-router-dom"
 
 const Nav = () => {
-    const containerStyle = { display: 'flex', justifyContent: 'space-between', padding: '2rem' }
-
     return (
         <nav className='nav'>
             <ul>
@@ -19,6 +17,11 @@ const Nav = () => {
                 <li>
                     <NavLink to='/leaderboard' activeClassName='active'>
                         Leaderboard
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/logout' activeClassName='active'>
+                        Logout
                     </NavLink>
                 </li>
             </ul>

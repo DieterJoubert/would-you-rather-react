@@ -21,3 +21,7 @@ export const getArrayFromDictionary = (dictionary) => {
 
     return arr
 }
+
+export const userHasAnswered = (question, user) => {
+    return question.optionOne.votes.includes(user) || question.optionTwo.votes.includes(user)
+}

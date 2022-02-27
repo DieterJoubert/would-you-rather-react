@@ -25,31 +25,30 @@ const NewQuestion = () => {
 
     return (
         <div>
-            <div>Create New Question</div>
-            <form className='new-tweet' onSubmit={handleSubmit} >
-                <div>Would you rather:</div>
-                <div>
+            <h3 style={{ textAlign: 'center' }}>Create New Question</h3>
+            <form className='new-question' onSubmit={handleSubmit}>
+                <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ textAlign: 'center' }}>Would you rather</div>
                     <textarea
                         name='top'
-                        placeholder='foobar'
+                        placeholder='option 1'
                         value={text.top}
                         onChange={handleChange}
                         maxLength={280}
                     />
-                </div>
-                <div>OR</div>
-                <div>
+                    <div style={{ textAlign: 'center' }}>or</div>
                     <textarea
                         name='bottom'
-                        placeholder='foobar'
+                        placeholder='option 2'
                         value={text.bottom}
                         onChange={handleChange}
                         maxLength={280}
                     />
+                    <button className='btn' type='submit' disabled={isButtonDisabled()}>
+                        Submit
+                    </button>
                 </div>
-                <button className='btn' type='submit' disabled={isButtonDisabled()}>
-                    Submit
-                </button>
+
             </form>
         </div>
     )
