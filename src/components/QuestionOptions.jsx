@@ -1,14 +1,14 @@
 import { TiTick } from 'react-icons/ti/index'
 import { useDispatch } from 'react-redux'
-import { handleAnswerQuestion } from '../actions/questions'
+import { handleAnswerQuestion } from '../actions/shared'
 
 const QuestionOptions = (props) => {
-    const { question, authedUser } = props
+    const { question } = props
     const dispatch = useDispatch()
 
     const selectOption = (e, chosenOption) => {
         e.preventDefault();
-        dispatch(handleAnswerQuestion(authedUser, question.id, chosenOption))
+        dispatch(handleAnswerQuestion(question.id, chosenOption))
     }
 
     return (
