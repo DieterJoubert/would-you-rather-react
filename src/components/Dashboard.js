@@ -19,6 +19,7 @@ const getSelectedQuestionIds = (questions, authedUser, isUnasweredSelected) => {
     });
 
     return selectedIds
+        .sort((a, b,) => questions[b].timestamp - questions[a].timestamp)
 }
 
 const Dashboard = () => {

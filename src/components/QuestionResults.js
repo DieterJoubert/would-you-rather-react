@@ -15,23 +15,48 @@ const QuestionResults = (props) => {
             <div class="text-container">
                 Would you rather
             </div>
-            <div class='result-row'>
-                <div class="text-container">
+            <div className='result-row'>
+                <div className="text-container">
                     <p>{question.optionOne.text}</p>
                 </div>
-                <div class="text-container">
-                    <p>{question.optionOne.votes.includes(authedUser) && <TiTick />}{optionOnePercent} %</p>
+
+                {question.optionOne.votes.includes(authedUser) &&
+                    <div className='user-stats-detail'>
+                        {<TiTick />}
+                    </div>
+                }
+                <div className='user-stats-detail'>
+                    <div>Votes</div>
+                    <hr />
+                    <div>{question.optionOne.votes.length}</div>
+                </div>
+                <div className='user-stats-detail'>
+                    <div>Percent</div>
+                    <hr />
+                    <div>{optionOnePercent}</div>
                 </div>
             </div>
-            <div class="text-container">
+            <div className="text-container">
                 or
             </div>
-            <div class='result-row'>
-                <div class="text-container">
+            <div className='result-row'>
+                <div className="text-container">
                     <p>{question.optionTwo.text}</p>
                 </div>
-                <div class="text-container">
-                    <p>{question.optionTwo.votes.includes(authedUser) && <TiTick />}{optionTwoPercent} %</p>
+                {question.optionTwo.votes.includes(authedUser) &&
+                    <div className='user-stats-detail'>
+                        {<TiTick />}
+                    </div>
+                }
+                <div className='user-stats-detail'>
+                    <div>Votes</div>
+                    <hr />
+                    <div>{question.optionTwo.votes.length}</div>
+                </div>
+                <div className='user-stats-detail'>
+                    <div>Percent</div>
+                    <hr />
+                    <div>{optionTwoPercent}</div>
                 </div>
             </div>
         </div>

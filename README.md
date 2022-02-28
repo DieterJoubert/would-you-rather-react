@@ -1,9 +1,27 @@
-# Would You Rather
+# Getting Started with Create React App
 
-Project built using React for udacity's React nanodegree.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Usage
+## Installation
+
+```
+npm install
+```
+or 
+```
+yarn install
+```
+
+## Execution
 
 ```
 npm start
 ```
+or 
+```
+yarn start
+```
+
+## Author
+
+Dieter Joubert

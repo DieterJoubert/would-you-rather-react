@@ -6,7 +6,7 @@ const QuestionSummary = (props) => {
 
     const onViewPollClick = (e, id) => {
         e.preventDefault()
-        navigate(`/question/${id}`)
+        navigate(`/questions/${id}`)
     }
 
     return (

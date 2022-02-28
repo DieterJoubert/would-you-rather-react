@@ -10,6 +10,7 @@ import LeaderBoard from './LeaderBoard';
 import NewQuestion from './NewQuestion';
 import QuestionPage from './QuestionPage';
 import Login from './Login';
+import NotFound from './NotFound';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,8 @@ const App = () => {
                 <Route path='/' exact element={<Dashboard />} />
                 <Route path='/add' element={<NewQuestion />} />
                 <Route path='/leaderboard' element={<LeaderBoard />} />
-                <Route path='/question/:id' element={<QuestionPage />} />
+                <Route path='/questions/:id' element={<QuestionPage />} />
+                <Route path='*' element={<NotFound />} />
               </Routes>
             </div>}
         </div>
