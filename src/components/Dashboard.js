@@ -37,11 +37,9 @@ const Dashboard = () => {
         setIsUnasweredSelected(false)
     }
 
-    const style = { display: 'flex', justifyContent: 'space-between' }
-
     return (
         <div>
-            <div className='dashboard-button-container' style={style}>
+            <div className='dashboard-button-container'>
                 <button className='btn large-btn' onClick={onViewUnansweredClick} disabled={isUnasweredSelected}>
                     Unanswered Questions
                 </button>

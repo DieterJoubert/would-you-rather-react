@@ -14,7 +14,7 @@ const Question = (props) => {
     const authedUserHasAnswered = userHasAnswered(question, authedUser)
 
     return (
-        <div className='question' style={{}}>
+        <div className='question'>
             <div>
                 {author.name} asks...
             </div>

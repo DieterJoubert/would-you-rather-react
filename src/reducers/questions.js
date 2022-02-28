@@ -21,8 +21,6 @@ export default function questions(state = {}, action) {
                 answer
             } = action
 
-            console.log([authedUser, qid, answer])
-
             const answeredQuestion = {
                 [qid]: {
                     ...state[qid],
