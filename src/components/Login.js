@@ -1,11 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { getArrayFromDictionary } from '../utils/helpers'
 import { handleSetAuthedUser } from '../actions/authedUser'
-import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const users = useSelector((state) => state.users)
     const userArray = getArrayFromDictionary(users)
 
@@ -13,7 +11,6 @@ const Login = () => {
         e.preventDefault()
         const uid = e.target.value
         dispatch(handleSetAuthedUser(uid))
-        navigate("/")
     }
 
     return (
