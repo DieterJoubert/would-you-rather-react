@@ -9,6 +9,7 @@ import Nav from './Nav';
 import LeaderBoard from './LeaderBoard';
 import NewQuestion from './NewQuestion';
 import QuestionPage from './QuestionPage';
+import Login from './Login';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,6 @@ const App = () => {
   })
 
   const authedUser = useSelector((state) => state.authedUser)
-  const isLoading = authedUser === null
 
   return (
     <BrowserRouter>
@@ -26,12 +26,12 @@ const App = () => {
         <LoadingBar />
         <div className='container'>
           <Nav />
-          {isLoading === true
-            ? null
+          {!authedUser
+            ? <Login />
             : <div>
               <Routes>
                 <Route path='/' exact element={<Dashboard />} />
-                <Route path='/new-question' element={<NewQuestion />} />
+                <Route path='/add' element={<NewQuestion />} />
                 <Route path='/leaderboard' element={<LeaderBoard />} />
                 <Route path='/question/:id' element={<QuestionPage />} />
               </Routes>

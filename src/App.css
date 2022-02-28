@@ -40,7 +40,8 @@ a {
 .nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+  /* justify-content: flex-start; */
   text-decoration: none;
 }
 
@@ -48,10 +49,10 @@ a {
   padding-left: 0;
 }
 
-.nav li:last-child {
+/* .nav li:last-child {
   padding-left: 0;
   margin-left: auto;
-}
+} */
 
 ul {
   padding-left: 0;
@@ -226,3 +227,32 @@ li {
 
 
 
+
+/* LOGIN */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.login-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-list-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* GENERAL */
+
+.center-vertically {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

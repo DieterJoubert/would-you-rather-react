@@ -11,7 +11,7 @@ const UserStats = (props) => {
 
     return (
         <div style={containerStyle}>
-            <div>name: {user.name}</div>
+            <div>Name: {user.name}</div>
             <div>Answered questions: {answeredQuestions}</div>
             <div>Created questions: {createdQuestions}</div>
             <div>score: {getUserScore(user)}</div>
