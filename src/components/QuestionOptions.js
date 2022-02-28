@@ -19,7 +19,7 @@ const QuestionOptions = (props) => {
                 <div className='text-container'>
                     <p>{question.optionOne.text}</p>
                 </div>
-                <button className='option-btn ' onClick={(e) => { selectOption(e, 'optionOne') }}>
+                <button className='btn option-btn ' onClick={(e) => { selectOption(e, 'optionOne') }}>
                     <TiTick />
                 </button>
             </div>
@@ -30,7 +30,7 @@ const QuestionOptions = (props) => {
                 <div className='text-container'>
                     <p>{question.optionTwo.text}</p>
                 </div>
-                <button className='option-btn' onClick={(e) => { selectOption(e, 'optionTwo') }}>
+                <button className='btn option-btn' onClick={(e) => { selectOption(e, 'optionTwo') }}>
                     <TiTick />
                 </button>
             </div>

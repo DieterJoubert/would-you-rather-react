@@ -211,6 +211,11 @@ li {
   width: 50px;
 }
 
+.option-btn:hover {
+  background-color: black;
+  color: green;
+}
+
 .btn:disabled {
   cursor: not-allowed;
 }
