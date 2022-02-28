@@ -19,22 +19,25 @@ const QuestionResults = (props) => {
                 <div className="text-container">
                     <p>{question.optionOne.text}</p>
                 </div>
-
-                {question.optionOne.votes.includes(authedUser) &&
-                    <div className='user-stats-detail'>
-                        {<TiTick />}
+                <div className='result-row-details'>
+                    {question.optionOne.votes.includes(authedUser) &&
+                        <div className='text-container'>
+                            {<TiTick />}
+                        </div>
+                    }
+                    <div className='question-result-detail'>
+                        <div>Votes</div>
+                        <hr />
+                        <div>{question.optionOne.votes.length}</div>
                     </div>
-                }
-                <div className='user-stats-detail'>
-                    <div>Votes</div>
-                    <hr />
-                    <div>{question.optionOne.votes.length}</div>
+                    <div className='question-result-detail'>
+                        <div>Percent</div>
+                        <hr />
+                        <div>{optionOnePercent} %</div>
+                    </div>
                 </div>
-                <div className='user-stats-detail'>
-                    <div>Percent</div>
-                    <hr />
-                    <div>{optionOnePercent}</div>
-                </div>
+
+
             </div>
             <div className="text-container">
                 or
@@ -43,21 +46,24 @@ const QuestionResults = (props) => {
                 <div className="text-container">
                     <p>{question.optionTwo.text}</p>
                 </div>
-                {question.optionTwo.votes.includes(authedUser) &&
-                    <div className='user-stats-detail'>
-                        {<TiTick />}
+                <div className='result-row-details'>
+                    {question.optionTwo.votes.includes(authedUser) &&
+                        <div className='text-container'>
+                            {<TiTick />}
+                        </div>
+                    }
+                    <div className='question-result-detail'>
+                        <div>Votes</div>
+                        <hr />
+                        <div>{question.optionTwo.votes.length}</div>
                     </div>
-                }
-                <div className='user-stats-detail'>
-                    <div>Votes</div>
-                    <hr />
-                    <div>{question.optionTwo.votes.length}</div>
+                    <div className='question-result-detail'>
+                        <div>Percent</div>
+                        <hr />
+                        <div>{optionTwoPercent} %</div>
+                    </div>
                 </div>
-                <div className='user-stats-detail'>
-                    <div>Percent</div>
-                    <hr />
-                    <div>{optionTwoPercent}</div>
-                </div>
+
             </div>
         </div>
     )

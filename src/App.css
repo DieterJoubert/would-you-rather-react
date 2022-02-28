@@ -324,12 +324,26 @@ li {
   justify-content: space-between;
 }
 
+.result-row-details {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* .result-row *:not(:first-of-type) {
   border: 1px solid #dad7d7;
   border-radius: 3px;
   padding: 5px;
   margin: 5px;
 } */
+
+.question-result-detail {
+  border: 1px solid #dad7d7;
+  margin: 0 5px;
+  padding: 5px;
+  width: 40%;
+  text-align: center;
+}
+
 
 /* NEW QUESTION */
 

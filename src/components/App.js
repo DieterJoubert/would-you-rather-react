@@ -31,11 +31,11 @@ const App = () => {
             ? <Login />
             : <div>
               <Routes>
+                <Route path='*' element={<NotFound />} />
                 <Route path='/' exact element={<Dashboard />} />
                 <Route path='/add' element={<NewQuestion />} />
                 <Route path='/leaderboard' element={<LeaderBoard />} />
                 <Route path='/questions/:id' element={<QuestionPage />} />
-                <Route path='*' element={<NotFound />} />
               </Routes>
             </div>}
         </div>
