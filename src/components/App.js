@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(handleInitialData())
-  })
+  }, [dispatch])
 
   const authedUser = useSelector((state) => state.authedUser)
 

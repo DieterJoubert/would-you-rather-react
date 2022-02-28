@@ -1,3 +1,8 @@
+html *
+{
+   font-family: Helvetica, sans-serif !important;
+}
+
 .App {
   text-align: center;
 }
@@ -228,13 +233,25 @@ li {
 
 
 
+/* GENERAL */
+
+.center-vertically {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: end;
+}
+
 /* LOGIN */
 
 .login-container {
   display: flex;
   justify-content: center;
 }
-
 
 .login-list {
   display: flex;
@@ -248,11 +265,44 @@ li {
   flex-direction: column;
 }
 
+/* LEADERBOARD */
 
-/* GENERAL */
+.leaderboard-container {
+  margin: 0 20%;
+}
 
-.center-vertically {
+.leaderboard-container li {
+  list-style-type: decimal !important;
+}
+
+.user-stats-container {
+  width: 100%;
+  max-width: 590px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #dad7d7;
+  border-radius: 3px;
+}
+
+.user-stats-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-stats-name {
+  padding: 10px
+}
+
+.user-stats-detail {
+  border: 1px solid #dad7d7;
+  margin: 0 5px;
+  padding: 5px;
+  width: 40%;
+  text-align: center;
+}
+
+.user-stats-detail hr {
+  height: 1px;
+  border: none;
+  background-color: rgba(0,0,0,.29);
 }

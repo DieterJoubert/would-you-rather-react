@@ -7,11 +7,14 @@ const LeaderBoard = () => {
     const userIdsRanked = getUsersRanked(getUsersArray(users)).map(x => x.id)
 
     return (
-        <div>
-            LEADERBOARD
-            {userIdsRanked.map((id) => (
-                <UserStats key={id} id={id} />
-            ))}
+        <div className='leaderboard-container'>
+            <ol>
+                {userIdsRanked.map((id) => (
+                    <li key={id}>
+                        <UserStats key={id} id={id} />
+                    </li>
+                ))}
+            </ol>
         </div>
     )
 }

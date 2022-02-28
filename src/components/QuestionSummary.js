@@ -19,7 +19,7 @@ const QuestionSummary = (props) => {
                     {question.optionTwo.text}
                 </div>
             </div>
-            <div>
+            <div className='flex-end'>
                 <button className='btn' onClick={(e) => onViewPollClick(e, question.id)}>
                     View
                 </button>

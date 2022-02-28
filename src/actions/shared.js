@@ -3,14 +3,12 @@ import { receiveQuestions, answerQuestion, addQuestion } from './questions'
 import { receiveUsers, addUserAnswer, addUserQuestion } from './users'
 import { showLoading, hideLoading } from "react-redux-loading";
 
-
 export function handleInitialData() {
     return (dispatch) => {
         dispatch(showLoading())
         return getInitialData().then(({ users, questions }) => {
             dispatch(receiveQuestions(questions))
             dispatch(receiveUsers(users))
-            //dispatch(setAuthedUser(AUTHED_ID))
             dispatch(hideLoading())
         })
     }
@@ -34,7 +32,6 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
         })
     }
 }
-
 
 export function handleAnswerQuestion(qid, answer) {
     return (dispatch, getState) => {

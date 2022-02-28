@@ -6,6 +6,7 @@ import { handleSetAuthedUser } from "../actions/authedUser"
 const Nav = () => {
     const dispatch = useDispatch()
     const { users, authedUser } = useSelector((state) => state)
+    const user = users[authedUser]
 
     const onLogoutButtonClicked = (e) => {
         e.preventDefault()
@@ -34,7 +35,10 @@ const Nav = () => {
                             {/* EMPTY ITEM FOR APPEARANCE */}
                         </li>
                         <li className="login-list-item">
-                            <div>{authedUser}</div>
+                            {/* EMPTY ITEM FOR APPEARANCE */}
+                        </li>
+                        <li className="login-list-item">
+                            <div>{user.name}</div>
                         </li>
                         <li className="login-list-item">
                             <button className='btn' onClick={(e) => { onLogoutButtonClicked(e) }} >
