@@ -1,6 +1,6 @@
 import { getInitialData, saveQuestionAnswer, saveQuestion } from "../utils/api";
 import { receiveQuestions, answerQuestion, addQuestion } from './questions'
-import { receiveUsers, addUserAnswer, addUserQuestion } from './users'
+import { receiveUsers } from './users'
 import { showLoading, hideLoading } from "react-redux-loading";
 
 export function handleInitialData() {
@@ -25,8 +25,7 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
             optionTwoText,
             author: authedUser,
         }).then((q) => {
-            dispatch(addQuestion(q))
-            dispatch(addUserQuestion(authedUser, q.id))
+            dispatch(addQuestion(authedUser, q))
         }).then(() => {
             dispatch(hideLoading())
         })
@@ -50,7 +49,6 @@ export function handleAnswerQuestion(qid, answer) {
             alert('There was an error answering the question. Try again.')
         }).then(() => {
             dispatch(answerQuestion(authedUser, qid, answer))
-            dispatch(addUserAnswer(authedUser, qid, answer))
         })
     }
 }

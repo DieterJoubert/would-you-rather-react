@@ -12,7 +12,7 @@ const QuestionResults = (props) => {
 
     return (
         <div>
-            <div class="text-container">
+            <div className="text-container">
                 Would you rather
             </div>
             <div className='result-row'>

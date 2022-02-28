@@ -1,5 +1,5 @@
 export const RECEIVE_QUESTIONS = 'RECEIVE_TWEETS'
-export const ADD_QUESTION = 'ADD_TWEET'
+export const ADD_QUESTION = 'ADD_QUESTION'
 export const ANSWER_QUESTION = 'ANSWER_QUESTION'
 
 export function receiveQuestions(questions) {
@@ -9,10 +9,11 @@ export function receiveQuestions(questions) {
     }
 }
 
-export function addQuestion(question) {
+export function addQuestion(authedUser, question) {
     return {
         type: ADD_QUESTION,
-        question,
+        authedUser,
+        question
     }
 }
 
