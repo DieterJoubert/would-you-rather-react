@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Would You Rather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project built for Udacity's react nanodegree
 
 ## Description
 
