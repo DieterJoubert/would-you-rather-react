@@ -1,5 +1,4 @@
 export const getUserScore = (user) => {
-    console.log(user)
     return user.questions.length + getArrayFromDictionary(user.answers).length
 }
 

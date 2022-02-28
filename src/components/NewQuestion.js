@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { handleAddQuestion } from '../actions/shared';
+import { useNavigate } from 'react-router-dom';
 
 const NewQuestion = () => {
     const [text, setText] = useState({ top: '', bottom: '' })
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         const value = e.target.value
@@ -21,6 +23,7 @@ const NewQuestion = () => {
         e.preventDefault()
         dispatch(handleAddQuestion(text.top, text.bottom))
         setText({ top: '', bottom: '' })
+        navigate('/')
     }
 
     return (

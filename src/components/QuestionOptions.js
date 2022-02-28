@@ -13,19 +13,23 @@ const QuestionOptions = (props) => {
 
     return (
         <div>
-            <div>
+            <div className='center-horizontally'>
                 Would you rather </div>
             <div className='option-btn-container'>
-                {question.optionOne.text}
-                <button className='option-btn' onClick={(e) => { selectOption(e, 'optionOne') }}>
+                <div className='text-container'>
+                    <p>{question.optionOne.text}</p>
+                </div>
+                <button className='option-btn ' onClick={(e) => { selectOption(e, 'optionOne') }}>
                     <TiTick />
                 </button>
             </div>
-            <div>
-                OR
+            <div className='center-horizontally'>
+                or
             </div>
             <div className='option-btn-container'>
-                {question.optionTwo.text}
+                <div className='text-container'>
+                    <p>{question.optionTwo.text}</p>
+                </div>
                 <button className='option-btn' onClick={(e) => { selectOption(e, 'optionTwo') }}>
                     <TiTick />
                 </button>
