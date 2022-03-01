@@ -1,7 +1,7 @@
 const NotFound = () => {
 
     return (
-        <div className='container'>
+        <div className='text-container'>
             <h1>Page not found</h1>
         </div>
     )
